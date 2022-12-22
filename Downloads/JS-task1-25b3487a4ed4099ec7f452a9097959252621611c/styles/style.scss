@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    padding-top: 10%;
+    text-align: center;
+    color: red;
+    font-size: 60px;
+}
+h3 {
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+}
+.wrapper {
+    background-image: url(../images/1663624716_1-phonoteka-org-p-novogodnii-detskii-fon-vkontakte-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .auto-calculator {
+        display: flex;
+        justify-content: center;
+        &__wrapper {
+            width: 600px;
+            margin-bottom: 5%;
+            background-color: #fff;
+            border: 1px solid rgb(168, 5, 5);
+            h4 {
+                background-color: rgb(168, 5, 5);
+                color: white;
+                text-align: center;
+                padding: 2%;
+                margin-bottom: 3%;
+            }
+        }
+        &__item_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        &__item {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__items {
+            margin-right: 5%;
+            margin-left: 25%;
+            display: flex;
+            flex-direction: column;
+            .auto-calculator__radio-buttons {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+        &__button {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3%;
+        }
+        input[type="text"],
+        .auto-calculator__auction {
+            width: 200px;
+            border-radius: 5px;
+            border: solid 1px;
+            margin-bottom: 1%;
+        }
+    }
+
+    .numbers {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .number {
+            height: 50px;
+            width: 100px;
+            font-size: 20px;
+        }
+        .numbers__button {
+            background-color: red;
+            color: white;
+            border-color: none;
+            font-size: 20px;
+        }
+    }
+    .calculator {
+        display: flex;
+        justify-content: center;
+        &__input {
+            display: flex;
+            flex-direction: column;
+        }
+        &__input-first,
+        &__input-second {
+            width: 400px;
+            height: 200px;
+            font-size: 80px;
+            color: blue;
+        }
+        &__buttons {
+            display: flex;
+        }
+        &__button {
+            background-color: rgba(0, 0, 255, 0.306);
+            width: 100px;
+            font-size: 80px;
+            color: white;
+        }
+        &__result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 410px;
+            width: 300px;
+            background-color: #fff;
+            font-size: 80px;
+            color: blue;
+        }
+    }
+    // .slider {
+    //     display: flex;
+    //     margin: 0 auto;
+    //     &__next {
+    //         align-self: center;
+
+    //         background-color: blue;
+    //         color: white;
+    //         font-size: 30px;
+    //     }
+    //     &__gallery {
+    //         width: 1050px;
+    //     }
+    //     &__picture {
+    //         max-width: 100%;
+    //     }
+    // }
+    .selected {
+        background-color: rgb(255, 79, 79);
+    }
+    .registration-form {
+        width: 500px;
+        height: 550px;
+        background-color: #fff;
+        margin: 10% auto;
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px black;
+        &__wrapper {
+            margin: 20%;
+            padding-top: 40px;
+            h2 {
+                margin-bottom: 30px;
+            }
+        }
+        #name,
+        #surname,
+        #number,
+        #email,
+        #country {
+            border: none;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+            width: 300px;
+        }
+        #checkbox {
+            margin: 10px 5px;
+        }
+        #submit {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            width: 300px;
+            height: 40px;
+            background-color: blue;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+        }
+        #select {
+            width: 300px;
+            height: 40px;
+        }
+    }
+    .change-theme {
+        width: 800px;
+        height: 500px;
+        background-color: #fff;
+        margin: 10% auto;
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px black;
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            #change-theme__select {
+                font-size: 60px;
+            }
+            .change-theme__option {
+                font-size: 60px;
+            }
+        }
+    }
+}

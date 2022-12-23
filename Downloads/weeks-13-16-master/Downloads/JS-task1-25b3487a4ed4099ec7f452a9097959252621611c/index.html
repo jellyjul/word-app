@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="auto-calculator">
+        <div class="auto-calculator__wrapper">
+          <h4>Калькулятор стоимости авто</h4>
+          <div class="auto-calculator__items">
+          <div class="auto-calculator__item">
+            <label for="price">Цена на аукционе,¥</label>
+            <input class="auto-calculator__price" type="text" name="price" id="price">
+          </div>
+          <div class="auto-calculator__item ">
+            <label for="auction">Аукцион</label>
+            <select class="auto-calculator__auction" name="auction" id="auction">
+              <optgroup label="Бюджетные варианты &#60;¥22000 ">
+                <option value="0">По умолчанию </option>
+                <option value="1">ARAY BAYSIDE</option>
+                <option value="2">ARAY OKO</option>
+                <option value="3">HONDA IKY</option>
+              </optgroup>
+              <optgroup label="Варианты класса люкс &#62;¥22000">
+                <option value="4">BMW X5</option>
+                <option value="5">PORCHE</option>
+                <option value="6">MINI COUPER</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="auto-calculator__item auto-calculator__item_grid">
+              <label for="type">Тип услуги</label>
+            <div class=" auto-calculator__radio-buttons auto-calculator__radio-buttons_type">
+            <input class="auto-calculator__type-of-service" type="radio" name="service" id="full" value="full" checked>Целый автомобиль
+            <input class="auto-calculator__type-of-service" type="radio" name="service" id="half" value="half">Распил легковой
+            <input class="auto-calculator__type-of-service" type="radio" name="service" id="rama" value="rama">Распил рамовый
+            <input class="auto-calculator__type-of-service" type="radio" name="service" id="constructor" value="constructor">Конструктор легковой
+          </div>
+        </div>
+          <div class="auto-calculator__item auto-calculator__item_grid">
+            <label for="fuel">Тип топлива</label>
+            <div class="auto-calculator__radio-buttons auto-calculator__radio-buttons_fuel">
+            <input class="auto-calculator__type-of-fuel" type="radio" name="fuel" id="benzin" value="benzin" checked>бензин (включая гибрид)
+            <input class="auto-calculator__type-of-fuel" type="radio" name="fuel" id="diezel" value="diezel"> дизельное топливо
+            <input class="auto-calculator__type-of-fuel" type="radio" name="fuel" id="electro" value="electro"> электрический
+          </div>
+          </div>   
+          <div class="auto-calculator__item">
+            <label for="volume">Объем двигателя</label>
+            <input class="auto-calculator__volume" type="text" name="volume" id="volume">
+          </div>   
+          <div class="auto-calculator__item">
+            <label for="strength">Мощность</label>
+            <input class="auto-calculator__strength" type="text" name="strength" id="strength">
+          </div>  
+          <div class="auto-calculator__item auto-calculator__item_grid">
+            <label for="age">Возраст автомобиля </label>
+            <div class="auto-calculator__radio-buttons auto-calculator__radio-buttons_age">
+            <input class="auto-calculator__age" type="radio" name="age" id="age" value="less3">Меньше 3 лет
+            <input class="auto-calculator__age" type="radio" name="age" id="age" value="3to5">От 3 до 5
+            <input class="auto-calculator__age" type="radio" name="age" id="age" value="5to7" checked> От 5 до 7
+            <input class="auto-calculator__age" type="radio" name="age" id="age" value="7more"> Больше 7       
+          </div>  
+          </div>
+          <div class="auto-calculator__item auto-calculator__item_grid">
+            <label for="receiver">Получатель </label>
+            <div class="auto-calculator__radio-buttons auto-calculator__radio-buttons_receiver">
+              <input class="auto-calculator__receiver" type="radio" name="receiver" id="receiver" value="phys">Физическое лицо
+              <input class="auto-calculator__receiver" type="radio" name="receiver" id="receiver" value="urid" checked>Юридическое лицо
+          </div>  
+        </div>
+        </div>
+        <div class="auto-calculator__button">
+          <button class="auto-calculator__button">Рассчитать</button>
+        </div>
+      </div>
+      </div>
+      <div class="numbers">
+        <input class=" number numbers__input-first" id="input3" />
+        <input class="number  numbers__input-second" id="input4" />
+        <input class="number  numbers__input-third" id="input5" />
+        <input class="number  numbers__input-fourth" id="input6" />
+        <button class="number numbers__button">Готово</button>
+      </div>
+      <h2>Введите два числа</h2>
+      <div class="calculator">
+        <div class="calculator__input">
+          <input class="calculator__input-first" id="input1" />
+          <input class="calculator__input-second" id="input2" />
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__button" onclick="addition()">+</button>
+          <button class="calculator__button" onclick="extraction()">-</button>
+          <button class="calculator__button" onclick="division()">/</button>
+          <button class="calculator__button" onclick="multiplication()">
+            *
+          </button>
+        </div>
+        <div
+          class="calculator__result"
+          id="result"
+          onclick="changeColor(this)"
+        ></div>
+      </div>
+      <div class="registration-form">
+      <div class="registration-form__wrapper">
+        <h3>Регистрация</h3>
+        <div class="registration-form__name-surname">
+          <fieldset >
+            <legend>Имя</legend>
+            <div class="registration-form__name">
+              <input type="text" name="name" id="name" placeholder="Имя" onmouseover="colorMe()" onmouseout="colorMeback()">
+            </div>
+          </fieldset>
+          <div id="name__result"></div>
+          <fieldset>
+            <legend>Фамилия</legend>
+          <div class="registration-form__surname">
+            <input type="text" name="surname" id="surname"  placeholder="Фамилия"/>
+          </div>
+        </fieldset>
+        <div id="surname__result"></div>
+      </div>
+        <fieldset>
+            <legend>E-mail</legend>
+          <div class="registration-form__email">
+            <input type="email" name="email" id="email" placeholder="abs@mail.ru" />
+          </div>
+        </fieldset>
+        <div id="email__result"></div>
+        <fieldset>
+            <legend>Телефон</legend>
+          <div class="registration-form__number">
+            <input type="number" name="number" id="number" placeholder="+79273331319"/>
+          </div>
+          </fieldset>
+          <div id="number__result"></div>
+          <fieldset >
+            <legend>Страна</legend>
+            <div class="registration-form__country" id="country">
+            <select id="select">
+              <option>Россия</option>
+              <option>США</option>
+              <option>Португалия</option>
+              <option>Англия</option>
+              </select>
+            </div>
+          </fieldset>
+          <input type="checkbox" id="checkbox">Получать новости
+          <div id="checkbox__result"></div>
+          <div class="registration-form__submit">
+            <input type="submit" name="submit" value="Подтвердить" id="submit" onclick="submit()" />
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="change-theme" id="themebox" onchange="changeTheme()">
+      <div class="change-theme__wrapper"> 
+          <select id="change-theme__select">
+            <option  selected="selected" >Выберите любимый цвет</option>
+            <option value="blue"> Голубой</option>
+            <option value="red">Красный</option>
+            <option value="green">Зеленый</option>
+            <option value="orange">Оранжевый</option>
+            </select>
+    </div>
+      </div>
+    </div>
+  <script src="./index.js"></script>
+  </body>
+</html>

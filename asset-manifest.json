@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/word-app/static/css/main.c7aa3f40.css",
+    "main.js": "/word-app/static/js/main.ca179761.js",
+    "static/media/logo.png": "/word-app/static/media/logo.110d117ab1cbb67270c7.png",
+    "index.html": "/word-app/index.html",
+    "main.c7aa3f40.css.map": "/word-app/static/css/main.c7aa3f40.css.map",
+    "main.ca179761.js.map": "/word-app/static/js/main.ca179761.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7aa3f40.css",
+    "static/js/main.ca179761.js"
+  ]
+}

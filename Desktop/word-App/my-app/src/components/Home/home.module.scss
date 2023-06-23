@@ -40,17 +40,18 @@ body {
         text-align: center;
         background-color: $button-yellow;
         color: #fff;
-    }
-    &__button:hover {
-        width: 12%;
-        font-size: larger;
-        background-color: white;
+
+        &:hover {
+            width: 12%;
+            font-size: larger;
+            background-color: white;
+        }
     }
     &__row {
         display: flex;
         justify-content: center;
         gap: 50px;
-        margin-top: 2%;
+        margin: 2%;
     }
     &__column {
         display: flex;
@@ -59,6 +60,20 @@ body {
         p {
             font-size: 25px;
             font-weight: 800px;
+        }
+        &:hover {
+            box-shadow: 0px 30px 18px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.1, 1.1);
+            border-radius: 30px;
+        }
+    }
+}
+
+body {
+    .home {
+        .home__button:hover {
+            box-shadow: 0px 30px 18px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.1, 1.1);
         }
     }
 }

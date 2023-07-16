@@ -1,39 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { apiWords } from '../Api';
 import Header from "../Header/Header";
 import Home from '../Home/Home';
 import Footer from "../Footer/Footer"
-import cards from "../../data/table-row.json"
-import Card from '../Card/Card';
-import TableRow from '../TableRow/TableRow';
-import TableLine from '../TableLine/TableLine';
+import Table from '../../pages/Table';
+import Game from '../../pages/Game';
+import {Routes, Route} from 'react-router-dom'
 
-function App() {
+export default function App() {
+  const [words, setWords] = useState([]);
+  useEffect(() => {
+    fetch(apiWords)
+      .then(response => response.json())
+      .then(data => setWords(data));
+  }, []);
+  if (words.length === 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="App">
       <Header/>
-      <Home/>
+      <Routes>
+        <Route path = '/table' element={<Table words={words} />}></Route>
+        <Route path = '/game' element={<Game words = {words}/>}></Route>
+        <Route path = '/' element={<Home/>}></Route>
+      </Routes>
       <Footer/>
-
-    {cards.map((card,id )=>
-      <Card 
-      id={id} 
-      english={card.english} 
-      transcription= {card.transcription} 
-      russian = {card.russian}
-      tags = {card.tags}
-      tags_json = {card.tags_json} />)}
-<TableRow/>
-
     </div>
 
   );
 }
-
-export default App;
-
-{/* <TableRow id={cards.id} 
-english={cards.english} 
-transcription= {cards.transcription} 
-russian = {cards.russian}
-tags = {cards.tags}
-tags_json = {cards.tags_json} /> */}
